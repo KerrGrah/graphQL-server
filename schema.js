@@ -15,8 +15,7 @@ const loadArticles = () => {
 
         return promise
       }).then(parsed => {
-        // if I could send to client individually this woulbe possibly be the place
-        news.push({src: parsed.articles[0].source.id, title: parsed.articles[0].title, description: parsed.articles[0].description, url: parsed.articles[0].url})
+      news.push({src: parsed.articles[0].source.id, title: parsed.articles[0].title, description: parsed.articles[0].description, url: parsed.articles[0].url})
         if (parsed.articles[0].source.id === countries.slice(-1)[0])
           resolve(news);
         }
@@ -39,7 +38,7 @@ const loadArticles = () => {
         urlToImage: parsed.articles[0].urlToImage}
     });
     articles = data
-    console.log(articles);
+  //  console.log(articles);
   })
 }
 
